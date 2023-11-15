@@ -17,18 +17,18 @@ pipeline{
                bat 'mvn package'
             }
         }
-        stage('Test') {
-            steps {
-                // Add test commands here, for instance:
-                sh 'mvn test' // Maven test command
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         // Add test commands here, for instance:
+        //         sh 'mvn test' // Maven test command
+        //     }
+        // }
         
-        stage('Deploy') {
-            steps {
-                // Add deployment commands here, for instance:
-                sh 'scp target/your-application.jar user@your-server:/path/to/deployment/' // Example deployment command
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         // Add deployment commands here, for instance:
+        //         sh 'scp target/your-application.jar user@your-server:/path/to/deployment/' // Example deployment command
+        //     }
+        // }
     }
 }
