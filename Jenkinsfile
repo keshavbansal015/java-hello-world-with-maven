@@ -48,5 +48,14 @@ pipeline {
                 echo "Deployment completed."
             }
         }
+        stage('Monitor') {
+            steps {
+                // Example of sending a custom metric
+                sh 'gcloud monitoring metrics create --metric TEST_METRIC --description "Test of my metric"'
+
+                // Example of writing logs
+                sh 'echo "TESTING THE LOG" | gcloud logging write KESHAV'
+            }
+        }
     }
 }
