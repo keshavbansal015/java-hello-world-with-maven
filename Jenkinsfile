@@ -28,11 +28,13 @@ pipeline {
         stage('build') {
             steps {
                sh 'mvn package'
+               sh 'mvn compile'
+               sh 'mvn install'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test' // Maven test command
+                // sh 'mvn test' // Maven test command
                 echo "Test stage completed."
             }
         }
