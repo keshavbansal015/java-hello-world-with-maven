@@ -44,7 +44,7 @@ pipeline {
                 // sh 'sudo systemctl stop your-application.service' // Stop the current app
                 // sh 'cp target/your-application.jar /path/to/deployment/' // Copy new jar
                 // sh 'sudo systemctl start your-application.service' // Start the new app
-                sh 'java -cp target/jb-hello-world-maven-0.1.0.jar hello.HelloWorld'
+                sh 'java -cp target/jb-hello-world-maven-0.2.0.jar hello.HelloWorld'
                 echo "Deployment completed."
             }
         }
